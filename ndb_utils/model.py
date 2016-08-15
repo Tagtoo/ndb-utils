@@ -72,7 +72,6 @@ class DatastoreMixin(models.Model):
         super(DatastoreMixin, self).save()
 
 
-    def delete(self):
+    def delete(self, *args, **kwargs):
         self.ndb_model.remove(self.datastore_id)
-        super(DatastoreMixin, self).delete()
-
+        super(DatastoreMixin, self).delete(*args, **kwargs)
