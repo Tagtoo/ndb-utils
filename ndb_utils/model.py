@@ -59,12 +59,12 @@ class DatastoreMixin(models.Model):
         if self._auto_sync:
             self.sync()
 
-    def sync(self, batch=None):
+    def sync(self):
         obj = self.ndb_model.replace(
             id=self.datastore_id,
             data=self.to_datastore_dict()
         )
-        obj.put(batch)
+        obj.put()
 
         # NOTE:
         # while using objects.create, it will trigger save automatically
