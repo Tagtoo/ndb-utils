@@ -12,13 +12,12 @@ with open(os.path.join(here, 'README.md')) as f:
 
 
 REQUIREMENTS = [
-    'django',
-    'pyyaml',
-    'Pillow',
-    'coverage',
-    'unittest2',
-    'nose',
-    'gcloud',
+    'Django==1.6.3',
+    'PyYAML==3.12',
+    'Pillow==2.7.0',
+    'coverage==3.7.1',
+    'nose==1.3.1',
+    'unittest2==0.8.0',
 ]
 
 setup(
@@ -27,9 +26,11 @@ setup(
     description='ndb utils',
     author='lucemia',
     author_email='lucemia@gmail.com',
+    maintainer='Frank Jheng',
+    maintainer_email='shunyi@tagtoo.org',
     long_description=README,
     scripts=[],
-    url='https://github.com/lucemia/gcloud-python-orm',
+    url='https://github.com/Tagtoo/ndb-utils',
     packages=find_packages(),
     license='Apache 2.0',
     platforms='Posix; MacOS X; Windows',
