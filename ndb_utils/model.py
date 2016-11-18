@@ -1,7 +1,10 @@
-from gcloudorm import model as ndb
+import datetime
+
 from django.db import models
 from django.forms.models import model_to_dict
-import datetime
+
+from gcloudorm import model as ndb
+
 
 class Datastore(ndb.Model):
     @classmethod
@@ -29,7 +32,6 @@ class Datastore(ndb.Model):
         from gcloud import datastore
         obj = cls(id=id)
         datastore.client.Client().delete(obj.key)
-
 
 
 class DatastoreMixin(models.Model):
@@ -70,7 +72,6 @@ class DatastoreMixin(models.Model):
         self.last_sync = datetime.datetime.now()
 
         super(DatastoreMixin, self).save()
-
 
     def delete(self, *args, **kwargs):
         self.ndb_model.remove(self.datastore_id)
