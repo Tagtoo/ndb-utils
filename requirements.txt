@@ -1,8 +1,7 @@
-django
-pyyaml
-Pillow
-coverage
-unittest2
-nose
-gcloud==0.18.3
+Django==1.6.3
+PyYAML==3.12
+Pillow==2.7.0
+coverage==3.7.1
+nose==1.3.1
+unittest2==0.8.0
 -e git://github.com/Tagtoo/gcloud-python-orm.git#egg=gcloudorm
