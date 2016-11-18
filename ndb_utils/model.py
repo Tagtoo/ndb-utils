@@ -29,9 +29,8 @@ class Datastore(ndb.Model):
 
     @classmethod
     def remove(cls, id):
-        from gcloud import datastore
         obj = cls(id=id)
-        datastore.client.Client().delete(obj.key)
+        obj.delete()
 
 
 class DatastoreMixin(models.Model):
