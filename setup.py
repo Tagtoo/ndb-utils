@@ -14,7 +14,7 @@ with open(os.path.join(here, 'README.md')) as f:
 REQUIREMENTS = [
     'Django==1.6.3',
     'PyYAML==3.12',
-    'Pillow==2.7.0',
+    'Pillow==4.1.1',
     'coverage==3.7.1',
     'nose==1.3.1',
     'unittest2==0.8.0',
